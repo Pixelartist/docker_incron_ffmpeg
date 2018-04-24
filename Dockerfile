@@ -1,0 +1,19 @@
+FROM debian:latest
+MAINTAINER Manuel Mueller
+
+# __      __         __         .__
+#/  \    /  \_____ _/  |_  ____ |  |__   _____   ____
+#\   \/\/   /\__  \\   __\/ ___\|  |  \ /     \_/ __ \
+#\        /  / __ \|  | \  \___|   Y  \  Y Y  \  ___/
+# \__/\  /  (____  /__|  \___  >___|  /__|_|  /\___  >
+#      \/        \/          \/     \/      \/     \/
+
+# get base
+RUN apt-get update && apt-get upgrade -y
+
+# get essentials
+RUN apt-get -y install git nano ffmpeg incron
+
+##################################
+# Base Section Start
+##################################
