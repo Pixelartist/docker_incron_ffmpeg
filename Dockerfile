@@ -14,6 +14,17 @@ RUN apt-get update && apt-get upgrade -y
 # get essentials
 RUN apt-get -y install git nano ffmpeg incron
 
+# don't you rootizle me
+RUN echo "root" >> /etc/incron.allow
+
 ##################################
 # Base Section Start
 ##################################
+
+# add the convert script
+COPY convert.sh /opt/convertscript/
+COPY incrontab.txt /opt/convertscript/
+RUN incrontab /opt/convertscript/incrontab.txt -f
+
+# create the watch directory
+RUN mkdir /home/fileconversion
