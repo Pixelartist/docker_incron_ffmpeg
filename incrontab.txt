@@ -1,1 +1,1 @@
-/home/fileconversion IN_MODIFY /opt/convertscript/convert.sh
+/home/fileconversion IN_MODIFY /opt/convertscript/convert.sh $#
