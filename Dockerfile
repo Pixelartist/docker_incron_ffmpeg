@@ -29,3 +29,4 @@ RUN incrontab /opt/convertscript/incrontab.txt -f
 
 # create the watch directory
 RUN mkdir /home/fileconversion
+RUN mkdir /home/output
