@@ -1,15 +1,6 @@
 #!/bin/bash
-FILES=*.wav
-let i=0
-for f in $FILES
-do
-  echo "Processing $f file..."
-  let $((i++))
-  #echo "$i"
-  IFS='.' read -ra filename <<< "$f"
-  echo "$filename-$i"
-  #mv -i $f "$filename-converted.wav"
-  ffmpeg -i $f -y -c:a pcm_alaw output.wav;
-  ffmpeg -i output.wav -y -ab 128000 $filename-converted.wav
-  # cat $f
-done
+if [[ $1 == *.wav ]];
+then
+  ffmpeg -i /home/input/$1 -y -c:a pcm_alaw /home/output/output.wav;
+  ffmpeg -i /home/output/output.wav -y -ab 128000 /home/output/$1
+fi
