@@ -23,6 +23,7 @@ RUN echo "root" >> /etc/incron.allow
 
 # add the convert script
 COPY convert.sh /opt/convertscript/
+RUN chmod+x /opt/convertscript/convert.sh
 COPY incrontab.txt /opt/convertscript/
 RUN incrontab /opt/convertscript/incrontab.txt -f
 
