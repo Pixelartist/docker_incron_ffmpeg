@@ -26,9 +26,7 @@ You can also:
 The docker image takes care of most of the things (next version could be a smaller alpine).
 
 ```sh
-$ docker run -d -v [source files]:/home/fileconversion -v [output files]:/home/output warkommanda/
-$ npm install -d
-$ node app
+$ docker run -d -v [source files]:/home/fileconversion -v [output files]:/home/output warkommanda/docker_incron_ffmpeg
 ```
 
 ### Todos
