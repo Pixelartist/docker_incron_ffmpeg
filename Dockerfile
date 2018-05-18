@@ -12,7 +12,7 @@ MAINTAINER Manuel Mueller
 RUN apt-get update && apt-get upgrade -y
 
 # get essentials
-RUN apt-get -y install git nano ffmpeg incron rsyslog
+RUN apt-get -y install git nano ffmpeg incron rsyslog task-spooler
 
 # don't you rootizle me
 RUN echo "root" >> /etc/incron.allow
