@@ -1,1 +1,1 @@
-/home/fileconversion IN_MODIFY tsp /opt/convertscript/convert.sh $#
+/home/fileconversion IN_CLOSE tsp /opt/convertscript/convert.sh $#
